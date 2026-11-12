@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0a0e12"><title>Entrar — Gama Estúdio</title><link rel="stylesheet" href="../css/style.css"></head>
+<body>
+  <main class="login-page"><section class="login-card">
+    <a class="login-brand" href="../index.html"><img src="../assets/logo.svg" alt=""><h1>Gama Estúdio ®</h1><p>Área de administração</p></a>
+    <form id="login-form" class="login-form">
+      <div class="form-field"><label for="username">Usuário</label><input id="username" name="username" class="form-input" autocomplete="username" required></div>
+      <div class="form-field"><label for="password">Senha</label><input id="password" name="password" class="form-input" type="password" autocomplete="current-password" required></div>
+      <p id="login-error" class="login-error" hidden></p>
+      <button id="login-submit" class="btn btn-primary btn-block" type="submit">Entrar no painel →</button>
+    </form>
+    <p class="hint" style="margin-top:18px;text-align:center">Use as credenciais definidas na configuração do backend.</p>
+  </section></main>
+  <div id="toast-container" aria-live="polite"></div>
+  <script src="../js/api.js"></script><script src="../js/admin/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0a0e12"><title>Agenda — Gama Estúdio</title><link rel="stylesheet" href="../css/style.css"></head>
+<body data-admin-page="appointments">
+  <div class="admin-layout">
+    <aside class="sidebar" id="sidebar">
+      <a class="sidebar-brand" href="index.html"><img src="../assets/logo.svg" alt=""><span><strong>GAMA ESTÚDIO</strong><small>PAINEL DO ESTÚDIO</small></span></a>
+      <p class="sidebar-label">Visão geral</p><nav class="sidebar-nav" aria-label="Administração">
+        <a class="sidebar-link" href="index.html"><span class="sidebar-icon">⌂</span>Painel</a><a class="sidebar-link active" href="appointments.html"><span class="sidebar-icon">◷</span>Agenda</a><a class="sidebar-link" href="services.html"><span class="sidebar-icon">✂</span>Serviços</a><a class="sidebar-link" href="schedule.html"><span class="sidebar-icon">▦</span>Expediente</a><a class="sidebar-link" href="clients.html"><span class="sidebar-icon">♙</span>Clientes</a>
+      </nav><div class="sidebar-bottom"><a class="sidebar-link" href="../index.html"><span class="sidebar-icon">↗</span>Ver página pública</a><button id="btn-logout" class="sidebar-link btn-ghost" type="button"><span class="sidebar-icon">⇥</span>Sair</button></div>
+    </aside>
+    <main class="admin-main"><div class="admin-content">
+      <header class="admin-topbar"><div style="display:flex;gap:12px;align-items:center"><button id="menu-toggle" class="mobile-menu-toggle" type="button" aria-label="Abrir menu">☰</button><div><h1>Agenda</h1><p>Consulte e organize os horários reservados.</p></div></div><a class="btn btn-outline btn-sm" href="../booking.html">+ Novo agendamento</a></header>
+      <section>
+        <div class="toolbar"><div class="toolbar-group"><button class="btn btn-outline btn-sm view-mode active" data-view="day" type="button">Dia</button><button class="btn btn-outline btn-sm view-mode" data-view="week" type="button">7 dias</button></div><div class="toolbar-group"><input id="agenda-date" class="form-input" type="date" aria-label="Data da agenda"><select id="barber-filter" class="form-select"><option value="">Todos os profissionais</option></select><select id="status-filter" class="form-select"><option value="">Todos os status</option><option value="pending">Aguardando confirmação</option><option value="confirmed">Confirmados</option><option value="rescheduled">Reagendados</option><option value="completed">Concluídos</option><option value="cancelled">Cancelados</option></select></div></div>
+        <div id="date-tabs" class="date-tabs" aria-label="Selecionar dia"></div>
+        <div id="agenda-caption" class="muted small" style="margin-bottom:12px"></div>
+        <div id="appointments-list" class="appointment-list" aria-live="polite"><div class="loading-spinner"><span class="spinner"></span></div></div>
+      </section>
+    </div></main>
+  </div>
+  <div id="reschedule-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="reschedule-title">
+    <div class="modal-card"><header class="modal-head"><h2 id="reschedule-title">Escolher novo horário</h2><button class="icon-button" type="button" data-close-reschedule aria-label="Fechar">×</button></header>
+      <div class="modal-body"><p class="muted small">A lista mostra somente horários livres para este serviço e profissional.</p><div class="form-field"><label for="reschedule-date">Nova data</label><input id="reschedule-date" class="form-input" type="date"></div><div id="reschedule-slots" class="time-grid"></div><p id="reschedule-empty" class="hint" hidden>Nenhum horário disponível nesta data.</p></div>
+      <div class="modal-footer"><button class="btn btn-outline" type="button" data-close-reschedule>Cancelar</button><button id="btn-confirm-reschedule" class="btn btn-primary" type="button" disabled>Salvar horário</button></div>
+    </div>
+  </div>
+  <div id="toast-container" aria-live="polite"></div>
+  <script src="../js/api.js"></script><script src="../js/admin/auth.js"></script><script src="../js/admin/appointments.js"></script>
+</body>
+</html>

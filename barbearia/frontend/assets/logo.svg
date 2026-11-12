@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Gama Estúdio">
+  <circle cx="60" cy="60" r="56" fill="#0A0E12" stroke="#EDF0F1" stroke-width="3"/>
+  <path d="M82 38a31 31 0 1 0 7 31H61V55h44v11a45 45 0 1 1-11-36z" fill="#F5F6F7" transform="translate(0 4) scale(.72) translate(24 23)"/>
+  <text x="94" y="31" fill="#A7D7A5" font-family="Arial,sans-serif" font-size="17" font-weight="700">®</text>
+</svg>

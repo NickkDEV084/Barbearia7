@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0a0e12"><title>Clientes — Gama Estúdio</title><link rel="stylesheet" href="../css/style.css"></head>
+<body data-admin-page="clients">
+  <div class="admin-layout">
+    <aside class="sidebar" id="sidebar"><a class="sidebar-brand" href="index.html"><img src="../assets/logo.svg" alt=""><span><strong>GAMA ESTÚDIO</strong><small>PAINEL DO ESTÚDIO</small></span></a><p class="sidebar-label">Visão geral</p><nav class="sidebar-nav" aria-label="Administração"><a class="sidebar-link" href="index.html"><span class="sidebar-icon">⌂</span>Painel</a><a class="sidebar-link" href="appointments.html"><span class="sidebar-icon">◷</span>Agenda</a><a class="sidebar-link" href="services.html"><span class="sidebar-icon">✂</span>Serviços</a><a class="sidebar-link" href="schedule.html"><span class="sidebar-icon">▦</span>Expediente</a><a class="sidebar-link active" href="clients.html"><span class="sidebar-icon">♙</span>Clientes</a></nav><div class="sidebar-bottom"><a class="sidebar-link" href="../index.html"><span class="sidebar-icon">↗</span>Ver página pública</a><button id="btn-logout" class="sidebar-link btn-ghost" type="button"><span class="sidebar-icon">⇥</span>Sair</button></div></aside>
+    <main class="admin-main"><div class="admin-content"><header class="admin-topbar"><div style="display:flex;gap:12px;align-items:center"><button id="menu-toggle" class="mobile-menu-toggle" type="button" aria-label="Abrir menu">☰</button><div><h1>Clientes</h1><p>Conheça quem já passou pelo estúdio.</p></div></div><span id="client-total" class="count-pill"></span></header>
+      <div class="toolbar"><input id="client-search" class="form-input client-search" type="search" placeholder="Buscar por nome ou telefone" aria-label="Buscar clientes"></div>
+      <div id="clients-list" aria-live="polite"><div class="loading-spinner"><span class="spinner"></span></div></div>
+    </div></main>
+  </div>
+  <div id="client-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="client-modal-name"><div class="modal-card"><header class="modal-head"><div><h2 id="client-modal-name">Histórico do cliente</h2><span id="client-detail-phone" class="muted small"></span></div><button class="icon-button" type="button" data-close-client aria-label="Fechar">×</button></header><div id="client-history" class="modal-body"></div></div></div>
+  <div id="toast-container" aria-live="polite"></div>
+  <script src="../js/api.js"></script><script src="../js/admin/auth.js"></script><script src="../js/admin/clients.js"></script>
+</body>
+</html>

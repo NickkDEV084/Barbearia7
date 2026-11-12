@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0e12">
+  <title>Agendar horário — Gama Estúdio ®</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="booking">
+  <header class="page-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img class="brand-logo" src="assets/logo.svg" alt=""><span class="brand-wordmark">GAMA ESTÚDIO<small class="brand-caption">55 DA COHAB</small></span></a>
+      <a class="header-back" href="index.html">← Voltar ao início</a>
+    </div>
+  </header>
+  <main class="main-content">
+    <div class="container page-main">
+      <p class="eyebrow">Reserva simples, no seu tempo</p>
+      <h1 class="page-title">Agende seu horário.</h1>
+      <p class="page-intro">Escolha o serviço, encontre um horário livre e pronto.</p>
+
+      <nav class="steps" aria-label="Etapas do agendamento">
+        <div class="step active" data-step-indicator="1"><span class="step-dot">1</span><span class="step-label">Serviço</span></div>
+        <div class="step" data-step-indicator="2"><span class="step-dot">2</span><span class="step-label">Profissional</span></div>
+        <div class="step" data-step-indicator="3"><span class="step-dot">3</span><span class="step-label">Data e hora</span></div>
+        <div class="step" data-step-indicator="4"><span class="step-dot">4</span><span class="step-label">Seus dados</span></div>
+      </nav>
+
+      <section id="step-1" class="booking-step active" aria-labelledby="step-service-title">
+        <h2 id="step-service-title" class="step-title">O que vamos fazer?</h2>
+        <div id="booking-services" class="select-grid"><div class="loading-spinner"><span class="spinner" aria-label="Carregando"></span></div></div>
+      </section>
+      <section id="step-2" class="booking-step" aria-labelledby="step-barber-title">
+        <h2 id="step-barber-title" class="step-title">Com quem você quer agendar?</h2>
+        <div id="booking-barbers" class="select-grid"><div class="loading-spinner"><span class="spinner" aria-label="Carregando"></span></div></div>
+      </section>
+      <section id="step-3" class="booking-step" aria-labelledby="step-date-title">
+        <h2 id="step-date-title" class="step-title">Qual dia funciona pra você?</h2>
+        <div id="date-chips" class="date-strip" aria-label="Próximos dias"></div>
+        <h3 class="time-heading">Horários livres</h3>
+        <div id="time-slots" class="time-grid" aria-live="polite"></div>
+        <p id="no-slots-message" class="empty-state" hidden>Nenhum horário livre neste dia. Tente outra data.</p>
+      </section>
+      <section id="step-4" class="booking-step" aria-labelledby="step-data-title">
+        <h2 id="step-data-title" class="step-title">Só falta confirmar seus dados.</h2>
+        <form id="booking-form">
+          <div class="form-grid">
+            <div class="form-field"><label for="client-name">Seu nome</label><input class="form-input" id="client-name" name="client_name" autocomplete="name" placeholder="Nome e sobrenome" required minlength="2" maxlength="120"></div>
+            <div class="form-field"><label for="client-phone">WhatsApp com DDD</label><input class="form-input" id="client-phone" name="client_phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(11) 99999-9999" required></div>
+          </div>
+          <div id="booking-summary" class="booking-summary"></div>
+          <button id="confirm-booking" class="btn btn-primary btn-block" type="submit">Confirmar agendamento ↗</button>
+          <p class="hint">Seu horário fica reservado assim que confirmar. Em caso de conflito, escolha outro horário disponível.</p>
+        </form>
+      </section>
+      <div class="booking-nav">
+        <button id="btn-back" class="btn btn-outline" type="button" hidden>← Voltar</button>
+        <button id="btn-next" class="btn btn-primary" type="button" disabled>Continuar →</button>
+      </div>
+    </div>
+  </main>
+  <div id="toast-container" aria-live="polite"></div>
+  <script src="js/api.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+</html>

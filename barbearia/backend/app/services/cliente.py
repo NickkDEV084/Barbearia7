@@ -1,1 +1,0 @@
-# Regras de negocio: cliente

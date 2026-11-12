@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0e12">
+  <title>Agendamento confirmado — Gama Estúdio ®</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="confirmation">
+  <header class="page-header">
+    <div class="container header-inner"><a class="brand" href="index.html"><img class="brand-logo" src="assets/logo.svg" alt=""><span class="brand-wordmark">GAMA ESTÚDIO<small class="brand-caption">55 DA COHAB</small></span></a><a class="header-back" href="index.html">Início</a></div>
+  </header>
+  <main class="container">
+    <section class="confirmation-card">
+      <div class="confirmation-mark" aria-hidden="true">✓</div>
+      <p class="eyebrow" style="margin-top:22px">Tudo certo por aqui</p>
+      <h1 id="confirmation-title">Pedido recebido.</h1>
+      <p id="confirmation-message">Seu horário fica pré-reservado até a confirmação do estúdio. Salve os detalhes ou envie uma mensagem para ter tudo à mão.</p>
+      <div id="confirmation-details" class="confirmation-details" aria-live="polite"></div>
+      <div class="confirmation-actions">
+        <a id="whatsapp-share" class="btn btn-primary btn-block" href="#" target="_blank" rel="noopener noreferrer">Compartilhar no WhatsApp ↗</a>
+        <button id="save-calendar" class="btn btn-outline btn-block" type="button">Salvar na agenda ↓</button>
+        <a class="btn btn-ghost btn-block" href="index.html">Voltar ao início</a>
+      </div>
+    </section>
+  </main>
+  <div id="toast-container" aria-live="polite"></div>
+  <script src="js/api.js"></script>
+  <script src="js/confirmation.js"></script>
+</body>
+</html>
